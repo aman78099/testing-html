@@ -1,0 +1,174 @@
+/* Reset all elements to remove default margin and padding, include borders in size calculations */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set body font to Lobster, add full-page background image, white text, and use flex layout with full viewport height */
+body {
+    font-family: 'Lobster', cursive;
+    background-image: url('background.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar navigation styles: full width, vertical flex layout, centered items, with spacing between */
+.sidebar-nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8%;
+}
+
+/* Sidebar buttons style: green background, rounded corners, white text, sized relative to viewport width, with padding and margin */
+.sidebar-button {
+    width: 80%;
+    padding: 10% 5%;
+    background-color: rgb(53, 116, 53);
+    border: 2px solid rgb(1, 100, 1);
+    border-radius: 25px;
+    font-size: 1.2vw;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 5%;
+    transition: 0.3s ease;
+}
+
+/* Hover effect for sidebar buttons: white background, green text, slight upward movement, and shadow */
+.sidebar-button:hover {
+    background-color: white;
+    color: rgb(53, 116, 53);
+    transform: translateY(-4%);
+    box-shadow: 0 0.3vw 0 black;
+}
+
+/* Responsive font size adjustments for text and sidebar buttons on smaller screens (max 768px wide) */
+@media (max-width: 768px) {
+    .text {
+      font-size: 5vw;
+    }
+    .sidebar-button {
+      font-size: 3vw;
+    }
+}
+
+/* Sidebar navigation fills its container height and evenly spaces buttons vertically */
+.sidebar-nav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly; 
+}
+
+/* Fixed-position text box at bottom right with semi-transparent black background and rounded top-left corner */
+.text {
+    position: fixed;
+    bottom: 0;     
+    right: 0;       
+    font-size: 1.8vw;
+    color: white;
+    text-align: right;
+    font-family: 'Lobster', cursive;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.4); 
+    padding: 0.2em 0.5em; 
+    border-radius: 10px 0 0 0; 
+}
+
+/* Left sidebar styling: fixed position, gray background, vertical layout, centered items, full viewport height */
+.left-bar {
+    width: 20%;
+    min-width: 180px;
+    background-color: gray;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5%;
+    height: 100vh;          
+    position: fixed;       
+    left: 0;
+    top: 0;
+    z-index: 1000;          
+}
+
+/* Sponsor content container: margin to avoid sidebar, centered content, padding, and full viewport height */
+.sponsor-content {
+    margin-left: 20%;
+    width: 80%;
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Alternative sponsor content layout with horizontal spacing, wrap, and auto height */
+.sponsor-content.horizontal {
+    margin-left: 20%;
+    width: 80%;
+    padding: 5%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2%;
+    flex-wrap: wrap;
+    height: auto;
+}
+
+/* First sponsor text block: margin from left and top, medium-large font, flex layout with wrap, black text */
+.text1{
+    margin-left: 20%;
+    margin-top: 20%;
+    font-size: 120%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5%;
+    flex-wrap: wrap; 
+    color: black;
+}
+
+/* Second sponsor text block: top margin, medium font, black text, centered with max width */
+.text2 {
+    margin-top: 5%;
+    font-size: 120%;
+    color: black;
+    text-align: center;
+    padding: 1em;
+    max-width: 40%;
+}
+
+/* Responsive font size and width for second sponsor text on smaller screens */
+@media (max-width: 768px) {
+    .text2 {
+      font-size: 3vw;
+      max-width: 100%;
+    }
+}
+
+/* Foodie sponsor image styling: positioned absolutely, placed about 30% from left and 15% from top, with width and height set */
+.foodie {
+  position: absolute;
+  margin-left: 30%;
+  margin-top: 15%;
+  width: 20%;
+  height: 22%;
+}
+
+/* Food Haven sponsor image styling: positioned absolutely, placed about 70% from left and 30% from top, with width and height set */
+.haven {
+  position: absolute;
+  margin-left: 70%;
+  margin-top: 30%;
+  width: 20%;
+  height: 20%;
+}
