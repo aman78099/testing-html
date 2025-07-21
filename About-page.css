@@ -1,0 +1,128 @@
+/* This reset all margins and paddings, include borders and padding in element size */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+/* This styles the whole page with Lobster font*/
+body {
+    font-family: 'Lobster', cursive;
+    background-image: url('background.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    display: flex;
+    height: 100vh;
+}
+  
+/* Sidebar navigation container: full width and vertical flex layout. */
+.sidebar-nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8%;
+}
+
+/* Sidebar navigation container: full width, vertical flex layout and centered items,*/  
+.sidebar-button {
+    width: 80%;
+    padding: 10% 5%;
+    background-color: rgb(53, 116, 53);
+    border: 2px solid rgb(1, 100, 1);
+    border-radius: 25px;
+    font-size: 1.2vw;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 5%;
+    transition: 0.3s ease;
+}
+
+/* Sidebar buttons change background and text color on hover, move slightly up, and add shadow */
+.sidebar-button:hover {
+    background-color: white;
+    color: rgb(53, 116, 53);
+    transform: translateY(-4%);
+    box-shadow: 0 0.3vw 0 black;
+}
+
+/* Responsive font sizes for small screens under 768px */
+@media (max-width: 768px) {
+    .text {
+      font-size: 5vw;
+    }
+    .sidebar-button {
+      font-size: 3vw;
+    }
+}
+
+/* Sidebar nav fills height and evenly spaces buttons vertically */
+.sidebar-nav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly; 
+}
+  
+/* Text fixed to bottom right with semi-transparent black background and rounded corner */
+.text {
+    position: fixed;
+    bottom: 0;     
+    right: 0;       
+    font-size: 1.8vw;
+    color: white;
+    text-align: right;
+    font-family: 'Lobster', cursive;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.4); 
+    padding: 0.2em 0.5em; 
+    border-radius: 10px 0 0 0; 
+}
+
+/* Left sidebar styling: fixed position, gray background, vertical layout, full height */
+.left-bar {
+    width: 20%;
+    min-width: 180px;
+    background-color: gray;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5%;
+    height: 100vh;          
+    position: fixed;       
+    left: 0;
+    top: 0;
+    z-index: 1000;          
+}
+
+/* Main content shifted right to make room for sidebar, centered content, padding added */
+.about-content {
+    margin-left: 20%; 
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+    height: 100vh;
+    text-align: center;
+}
+  
+/* Paragraph styling inside about content: larger black text, max width for readability, and good line spacing */
+.about-content p {
+    font-size: 147%;
+    max-width: 700px;
+    line-height: 1.6;
+    color: black;
+}
+  
+/* Responsive paragraph font size for smaller screens */
+@media (max-width: 768px) {
+    .about-content p {
+      font-size: 4vw;
+    }
+}
