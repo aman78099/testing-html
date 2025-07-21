@@ -1,0 +1,218 @@
+/* Reset margin and padding on all elements, use border-box for sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style the page body with Lobster font, background image, white text, full viewport height, and flex layout */
+body {
+    font-family: 'Lobster', cursive;
+    background-image: url('background.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar navigation styles: full width, vertical flex column, centered items with gaps */
+.sidebar-nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8%;
+}
+
+/* Style sidebar links as buttons: sized, green background, rounded corners, white text, smooth transitions */
+.sidebar-button {
+    width: 80%;
+    padding: 10% 5%;
+    background-color: rgb(53, 116, 53);
+    border: 2px solid rgb(1, 100, 1);
+    border-radius: 25px;
+    font-size: 1.2vw;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 5%;
+    transition: 0.3s ease;
+    font-family: 'Lobster', cursive; 
+}
+
+/* Hover effect for sidebar buttons: switch colors, slight upward move, add shadow */
+.sidebar-button:hover {
+    background-color: white;
+    color: rgb(53, 116, 53);
+    transform: translateY(-4%);
+    box-shadow: 0 0.3vw 0 black;
+}
+
+/* Responsive font sizes on small screens */
+@media (max-width: 768px) {
+    .text {
+        font-size: 5vw;
+    }
+    .sidebar-button {
+        font-size: 3vw;
+    }
+}
+
+/* Sidebar nav full height flex layout, items centered and spaced evenly vertically */
+.sidebar-nav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly; 
+}
+
+/* Footer text fixed bottom right with semi-transparent background and Lobster font */
+.text {
+    position: fixed;
+    bottom: 0;     
+    right: 0;       
+    font-size: 1.8vw;
+    color: white;
+    text-align: right;
+    font-family: 'Lobster', cursive;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.4); 
+    padding: 0.2em 0.5em; 
+    border-radius: 10px 0 0 0; 
+}
+
+/* Sidebar container styles: fixed left position, gray background, vertical flex column */
+.left-bar {
+    width: 20%;
+    min-width: 180px;
+    background-color: gray;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5%;
+    height: 100vh;          
+    position: fixed;       
+    left: 0;
+    top: 0;
+    z-index: 1000;          
+}
+
+/* Override body font to Arial for rest of the page */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Ensure box-sizing is border-box globally */
+* {
+    box-sizing: border-box;
+}
+
+/* Flex row container for layout */
+.row {
+    display: flex;
+}
+
+/* Left section takes 35% width with vertical padding */
+.left {
+    flex: 35%;
+    padding: 15px 0;
+}
+
+/* Padding for h2 inside left section */
+.left h2 {
+    padding-left: 8px;
+}
+
+/* Right section takes 65% width with padding */
+.right {
+    flex: 65%;
+    padding: 15px;
+}
+
+/* Remove default list style and spacing for menu */
+#myMenu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Menu links styled with padding, no underline, black text, block display */
+#myMenu li a {
+    padding: 12px;
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+/* Change menu link background to white on hover */
+#myMenu li a:hover {
+    background-color: white;
+}
+
+/* Adjust margin and width for row container */
+.row {
+    margin-left: 20%;
+    width: 200%;
+}
+
+/* Main content area with left margin, padding, white text, Lobster font */
+.main-content {
+    margin-left: 20%;
+    padding: 2%;
+    color: white;
+    font-family: 'Lobster', cursive;
+    width: 100%;
+}
+
+/* Search container centered with set width */
+.search-container {
+    width: 60%;          
+    margin: 2rem auto;   
+}
+
+/* Search input styling: full width, padding, font size, border, rounded top corners */
+#mySearch {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 1.2rem;
+    border: 1px solid #ccc;
+    border-radius: 8px 8px 0 0; 
+    outline: none;
+    box-sizing: border-box;
+}
+
+/* Search result list styled with gray background, no bullets, rounded bottom corners, max height and scroll */
+.search-list {
+    list-style-type: none;
+    background-color: gray;
+    margin: 0;
+    padding: 0;
+    border-radius: 0 0 8px 8px; 
+    max-height: 300px;           
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+/* Search result links styled with white text, padding, bottom border, and smooth background transition */
+.search-list li a {
+    display: block;
+    padding: 12px 15px;
+    text-decoration: none;
+    color: white;
+    border-bottom: 1px solid #666;
+    transition: background-color 0.3s ease;
+}
+
+/* Remove bottom border on last search result */
+.search-list li:last-child a {
+    border-bottom: none;
+}
+
+/* Change background color on hover for search results */
+.search-list li a:hover {
+    background-color: #4b4b4b;
+}
